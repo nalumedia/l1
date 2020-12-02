@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trumper</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+        var newQuoteButton = document.querySelector('#js-new-quote');
+
+        if(newQuoteButton) {
+        newQuoteButton.addEventListener('click', getQuote);
+        }
+        
+        function getQuote() {
+            console.log("quote button was clicked");
+        }
+
+    </script>
 </head>
 <body>
-    <h1>hello world</h1>
-    
+    <div class="app">
+        <header>Random Donald Trump Quotes</header>
+        <section class="quotes">
+          <div class="quote-text" id="js-quote-text"></div>
+        </section>
+        <section class="controls">
+          <button type="button" id="js-new-quote" class="new-quote button">
+            Generate a new quote
+          </button>
+          <a class="twitter button" id="js-tweet" target="_blank" rel="noreferrer">Tweet it!</a>
+        </section>
+      </div>
 </body>
 </html>
