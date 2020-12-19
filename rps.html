@@ -5,20 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS Remix</title>
     <link rel="stylesheet" href="./rps.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Raleway&display=swap" rel="stylesheet">
   
+    <!-- TODO
+    - add throw history by appending html
+    - add games if player score or compuer score greater than 3 person wins
+    - add characters
+    - redo layout
+-->
 
 </head>
 <body>
     <script src="./rps.js"></script>
-    <h1>RPS Remix</h1>
-   
-   
-    Enter your throw <input type="text" id="your_toss" value="">
-    <button onclick="yourToss()">Throw</button>
-    <div id="toss"></div>
-    <div id="opponent_one"></div>
-    
+    <div id="container">
+        <div id="header">
+            <span id="headercontent">
+                <h1>RPS Remix</h1>
+              
+            </span>
+        </div>
+        <div id="results">
+            <span id="outcome"><h2>Choose Wisely</h2>
+            </span>
+        </div>
+        <div id="arena">
+            <span id="playerone">
+                <div id="throws">
+                    <span id="throwscontent">
+                        <button class="selection" data-selection="rock"><img src="/images/rock.png" onmouseover="setRock()" onclick="yourToss()"></button>
+                        <button class="selection" data-selection="paper"><img src="/images/paper.png" onmouseover="setPaper()" onclick="yourToss()"></button>
+                        <button class="selection" data-selection="scissorsr"><img src="/images/scissors.png" onmouseover="setScissors()" onclick="yourToss()"></button>
+                    </span>   
+                   
+                    <div id="currentchoice">none</div>
+                </div>
+            </span>
+            <span id="gameresults">
+                <div id="toss"></div>
+            </span>
+            <span id="computerone">
+                <div id="opponent_one"></div>
+            </span>
+        </div>
+        <div id="arena2">
+            <div id="playerscore">
+                <div id="playerscoretitle">
+                    Player Score
+                </div>
+                <span id="playerone2">
+                    0
+                </span>
+                <div class="playerStats">
+                    <ul>
+                        <li>Rocks Thrown:</li>
+                        <li id="playerrock">0</li>
+                        <li id="playerPercentRock">0</li>
+                        <li>Papers Thrown:</li>
+                        <li id="playerPaper">0</li>
+                        <li id="playerPercentPaper">0</li>
+                        <li>Scissors Thrown:</li>
+                        <li id="playerScissors">0</li>
+                        <li id="playerPercentScissors">0</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="ties">
+                <div id="tiestitle">
+                    Ties
+                </div>
+                <span id="gameresults2">
+                    0
+                </span>
+                Games Played:<br />
+                <span id="totalThrows">
+                    0
+                </span>
+            </div>
+            
+            
+            <div id="computerscore">
+                <div id="computerscoretitle">
+                    Computer Score
+                </div>
+                <span id="computerone2">
+                    0
+                </span>
+                <div class="computerStats">
+                    <ul>
+                        <li>Rocks Thrown:</li>
+                        <li id="computerRock">0</li>
+                        <li id="computerPercentRock">0</li>
+                        <li>Papers Thrown:</li>
+                        <li id="computerPaper">0</li>
+                        <li id="computerPercentPaper">0</li>
+                        <li>Scissors Thrown:</li>
+                        <li id="computerScissors">0</li>
+                        <li id="computerPercentScissors">0</li>
+                    </ul>
+                </div>
+            </div>
 
+            
+        </div>
+
+
+
+        
+
+        
+        
+        <!-- Enter your throw <input type="text" id="your_toss" value="">
+        
+        <button onclick="yourToss()">Throw</button> -->
+       
+        
+       
+    </div>
    
 </body>
 </html>
